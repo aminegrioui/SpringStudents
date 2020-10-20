@@ -18,6 +18,11 @@ public class Stoff {
 	}
 	
 	
+	public String describ() {
+		return "Stoff [name=" + name + ", numberDays=" + numberDays + "]";
+	}
+	
+	
 	
 
 }

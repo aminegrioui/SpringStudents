@@ -3,14 +3,49 @@
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
         "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
   <beans>
-        <bean id="student" class="com.grioui.javaBrain.Student">
+      <!--   <bean id="student" class="com.grioui.javaBrain.Student">
             <property name="name" value="mohammed Amine Grioui"></property>
-            <property name="stoff" ref="stoffA"></property>
-        </bean>
+            <property name="stoff1" ref="stoff1"></property>
+             <property name="stoff2" ref="stoffB"></property>
+              <property name="stoff3" ref="stoffC"></property>
+        </bean> -->
         
-         <bean id="stoffA" class="com.grioui.javaBrain.Stoff">
+ <!--         <bean id="stoff1" class="com.grioui.javaBrain.Stoff">
             <property name="name" value="Math"/>
             <property name="numberDays"  value="6"/>
+        </bean>
+       <bean id="stoffB" class="com.grioui.javaBrain.Stoff">
+            <property name="name" value="English"/>
+            <property name="numberDays"  value="8"/>
+        </bean>
+         <bean id="stoffC" class="com.grioui.javaBrain.Stoff">
+            <property name="name" value="Java"/>
+            <property name="numberDays"  value="10"/>
+        </bean> 
+        
+         <bean id="studentH" class="com.grioui.javaBrain.StudentH">
+            <property name="name" value="Monsef"></property>
+        
+        </bean>
+        
+        <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>
+         -->
+        <bean id="circle" class="com.grioui.javaBrain.CA.Circle">
+             <property name="center" ref="center"></property>
+             <property name="message" ref="MessageResource"></property>
+        </bean>
+        <bean id="center" class="com.grioui.javaBrain.CA.Point">
+          <property name="x" value="5"/>
+          <property name="y" value="7"/>
+        </bean>
+        
+        <bean id="MessageResource" class="org.springframework.context.support.ResourceBundleMessageSource">
+           <property name="basename">
+           
+             <value>mymessages</value>
+           
+              
+           </property>
         </bean>
   
   </beans>
